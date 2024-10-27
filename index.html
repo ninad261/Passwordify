@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Secure and easy-to-use password generator to enhance your online security. Generate strong passwords with customizable options.">
+    <meta name="keywords"
+        content="password generator, secure passwords, online security, password creation, strong passwords">
+    <meta name="author" content="Ninad Marathe">
+    <title>Password Generator - Generate Secure Passwords Online</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav-bar">
+        <div class="nav-container">
+            <div class="logo-image">
+                <img src="logo.svg" alt="Password Generator Logo">
+            </div>
+            <div class="nav-text1">
+                <p>Generate Passwords Online - 100% Secure</p>
+            </div>
+            <div class="nav-box1">
+                <p class="language">English</p>
+            </div>
+        </div>
+    </div>
+    <div class="header">
+        <h1 class="header1">Enhance your online security with our easy-to-use password generator.</h1>
+        <!-- <p>Just <span class="highlight">click</span> to generate a strong password!</p> -->
+    </div>
+    <div class="container-1">
+        <div class="generator-box">
+
+            <div class="generated-password">
+                <span class="password-display">Your Generated Password</span>
+                <div class="icon-images">
+                    <img id="copy-icon" src="copy-icon.svg" alt="Copy Password" style="cursor: pointer;">
+                </div>
+            </div>
+
+            <div class="checkboxes">
+                <label>
+                    <input type="checkbox" id="filter1" name="filter_1" class="hello"> Uppercase
+                </label>
+                <label>
+                    <input type="checkbox" id="filter2" name="filter_2" class="hello"> Lowercase
+                </label>
+                <label>
+                    <input type="checkbox" id="filter3" name="filter_3" class="hello"> Numbers
+                </label>
+                <label>
+                    <input type="checkbox" id="filter4" name="filter_4" class="hello"> Symbols
+                </label>
+            </div>
+
+            <div class="filter-add">
+                <div class="more-filters">
+                    <p class="text1">Set your password length</p>
+                    <div class="slidecontainer">
+                        <input type="range" min="1" max="18" value="50" class="slider" id="myRange">
+                    </div>
+                    <div class="number-box" id="numberBox">50</div> <!-- Added default value -->
+                </div>
+            </div>
+
+            <div class="rectangle-parent">
+                <div class="group-child"></div>
+                <div class="generate-wrapper">
+                    <div class="generate" onclick="generatePassword()">Generate</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-image">
+            <img class="big-image" src="passw1.png" alt="Password Generation Illustration">
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="copyright-box">
+            <p>© Passwordify 2024. All Rights Reserved. Your trusted source for secure password generation.</p>
+            <p class="name">Project By Ninad Marathe</p>
+        </div>
+
+        <div class="contact-details">
+            <p class="contact"><strong>Contact</strong></p>
+            <p class="email">ninad.m2610@gmail.com</p>
+        </div>
+    </div>
+
+    <script>
+        const slider = document.getElementById("myRange");
+        const numberBox = document.getElementById("numberBox");
+
+        // Update the number box when the slider value changes
+        slider.oninput = function () {
+            numberBox.innerText = this.value; // Update the number box with the slider value
+        };
+
+        // Initialize the number box with the default slider value
+        numberBox.innerText = slider.value;
+
+        function generatePassword() {
+            const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            const lowerCase = "abcdefghijklmnopqrstuvwxyz";
+            const numbers = "0123456789";
+            const symbols = "!@#$%^&*()_+[]{}|;:,.<>?";
+
+            let passwordChars = "";
+
+            // Get the state of the checkboxes
+            const useUpperCase = document.getElementById('filter1').checked;
+            const useLowerCase = document.getElementById('filter2').checked;
+            const useNumbers = document.getElementById('filter3').checked;
+            const useSymbols = document.getElementById('filter4').checked;
+
+            // Build the password character set based on selected filters
+            if (useUpperCase) passwordChars += upperCase;
+            if (useLowerCase) passwordChars += lowerCase;
+            if (useNumbers) passwordChars += numbers;
+            if (useSymbols) passwordChars += symbols;
+
+            // If no filters are selected, alert the user
+            if (passwordChars.length === 0) {
+                alert("Please select at least one filter.");
+                return;
+            }
+
+            // Get password length from the slider
+            const passwordLength = parseInt(slider.value); // Use the slider value as the password length
+
+            // Generate a random password
+            let password = "";
+            for (let i = 0; i < passwordLength; i++) {
+                const randomIndex = Math.floor(Math.random() * passwordChars.length);
+                password += passwordChars[randomIndex];
+            }
+
+            // Display the generated password
+            document.querySelector('.password-display').innerText = password;
+        }
+
+        function copyPassword() {
+            const password = document.querySelector('.password-display').innerText; // Get the displayed password
+            if (password && password !== "Your Generated Password") {
+                navigator.clipboard.writeText(password).then(() => {
+                    alert("Password copied to clipboard!"); // Alert the user
+                }).catch(err => {
+                    console.error("Could not copy text: ", err); // Handle error
+                });
+            } else {
+                alert("No password to copy!"); // Handle case where no password is generated
+            }
+        }
+
+        // Attach the copy functionality to the copy icon
+        document.getElementById('copy-icon').addEventListener('click', copyPassword);
+
+    </script>
+</body>
+
+</html>

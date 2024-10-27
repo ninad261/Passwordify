@@ -1,0 +1,234 @@
+.nav-bar{
+    width: 100%;
+    position: relative;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    
+}
+.nav-container{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.logo-image{
+    width: 40px;
+    margin-left: 40px;
+    height: 78px;
+    
+}
+
+.nav-text1{
+    margin-left: 900px;
+}
+.nav-box1{
+    margin-left: 66px;
+}
+.header{
+width: 635px;
+position: relative;
+font-size: 16px;
+text-align: left;
+display: inline-block;
+height: 143px;
+color: #032068;
+font-weight: 200;
+margin-left: 40px;
+margin-top: 10px;
+margin-bottom: 10px;
+}
+
+.container-1{
+    display: flex;
+    align-items: center;
+    margin-top: -34px;
+    gap: 80px;
+    margin-bottom: 40px;
+}
+
+.big-image{
+    width: 681px;
+    height: 590px;
+    margin-top: -145px;
+}
+.generator-box{
+width: 687px;
+position: relative;
+border-radius: 29px;
+background-color: #fff;
+border: 1px solid rgba(0, 0, 0, 0.16);
+box-sizing: border-box;
+height: 414px;
+margin-left: 40px;
+margin-top: 34px;
+}
+.generated-password{
+width: 594.96px;
+/* position: relative; */
+border-radius: 10px;
+background-color: #fff;
+border: 1px solid #d9d9d9;
+box-sizing: border-box;
+height: 78.1px;
+display: flex;
+margin-left: 40px;
+margin-top: 67px;
+/* justify-content: flex-end; */
+align-items: center;
+padding: 37px;
+}
+
+.checkboxes{
+    margin-left: 40px;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    width: 594.96px;
+    margin-top: 43px;
+}
+
+.more-filters{
+    width:687px;
+    display: flex;
+    margin-top: 30px;
+    margin-left: 40px;
+    gap: 20px;
+    align-items: center;
+}
+.hello{
+        height: 15px;
+        width: 30px;
+}
+.number-box{
+    width: 72.32px;
+    position: relative;
+    border-radius: 10px;
+    background-color: #fff;
+    border: 1px solid #d9d9d9;
+    box-sizing: border-box;
+    height: 37.9px;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.group-child {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 7px;
+    background-color: #032068;
+    width: 258px;
+    height: 42px;
+}
+.generate {
+    position: absolute;
+    top: 11px;
+    left: 14px;
+    line-height: 14.5px;
+    font-weight: 600;
+    cursor: pointer; /* Changes cursor to pointer on hover */
+}
+.generate-wrapper {
+    position: absolute;
+    top: 2px;
+    left: 82px;
+    width: 95px;
+    height: 37px;
+}
+.rectangle-parent {
+    width: 100%;
+    position: relative;
+    height: 42px;
+    text-align: left;
+    font-size: 14px;
+    color: #fff;
+    /* font-family: Poppins; */
+    margin-top: 30px;
+    margin-left: 208px;
+}
+.footer{
+    width: 100%;
+position: relative;
+background-color: #032068;
+height: 192px;
+display: flex;
+justify-content: space-between;
+
+}
+.copyright-box{
+width: 500px;
+position: relative;
+font-size: 18px;
+line-height: 27px;
+font-weight: 300;
+font-family: Poppins;
+color: #fff;
+text-align: left;
+display: inline-block;
+height: 79px;
+margin-left: 40px;
+margin-top: 27px;
+}
+
+.contact-details{
+margin-right: 107px;
+margin-top: 26px;
+}
+
+.contact {
+    width: 81px;
+    position: relative;
+    font-size: 18px;
+    line-height: 34px;
+    display: inline-block;
+    font-family: Poppins;
+    color: #fff;
+    text-align: left;
+    height: 6px;
+}
+
+.email{
+    width: 240px;
+position: relative;
+font-size: 18px;
+line-height: 34px;
+font-family: Poppins;
+color: #fff;
+/* text-align: right; */
+/* display: inline-block; */
+height: 34px;
+}
+
+.highlight {
+    color: #F4AD5E;
+    font-weight: bold;
+}
+
+#copy-icon{
+width: 25px;
+height: 25px;
+
+}
+
+#reload-icon{
+    width: 25px;
+    height: 25px;
+    margin-left: 45px;
+    margin-right: -12px;
+    position: absolute;
+}
+
+
+.icon-images{
+    margin-left: 478px;
+    display: flex;
+    position: absolute;
+}
+.password-display{
+    color: rgb(0, 0, 0);
+}
