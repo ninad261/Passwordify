@@ -1,4 +1,4 @@
-**Passwordify: Customizable Password Generator**
+**Passwordify: Custom Password Generator**
 
 ### Meta Description
 **Create strong, secure passwords effortlessly with Passwordify! Customize character types, adjust length, and easily copy passwords to your clipboard. Contribute on GitHub!**
